@@ -8,15 +8,9 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/api/run-bot",
       "dest": "news_summary_bot.py",
       "methods": ["GET", "POST"]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/",
-      "destination": "/api/run-bot"
     }
   ]
 }
