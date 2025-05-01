@@ -22,6 +22,12 @@ import concurrent.futures
 # Load environment variables
 load_dotenv()
 
+# Set up environment variables
+os.environ['NEWS_API_KEY'] = os.getenv('NEWS_API_KEY')
+os.environ['OPENAI_API_KEY'] = os.getenv('OPENAI_API_KEY')
+os.environ['SLACK_BOT_TOKEN'] = os.getenv('SLACK_BOT_TOKEN')
+os.environ['SLACK_CHANNEL_ID'] = os.getenv('SLACK_CHANNEL_ID')
+
 # Keyword lists for categorization
 LAUNCH_KEYWORDS = [
     "launch", "release", "announcement", "new product", "introducing",
