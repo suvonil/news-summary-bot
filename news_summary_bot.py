@@ -1111,6 +1111,18 @@ class NewsSummaryBot:
             schedule.run_pending()
             time.sleep(60)
 
+from flask import Flask, request
+
+app = Flask(__name__)
+bot = NewsSummaryBot()
+
+@app.route("/", methods=["GET", "POST"])
+def run_bot():
+    try:
+        bot.run()
+        return "Bot executed successfully"
+    except Exception as e:
+        return f"Error: {str(e)}", 500
+
 if __name__ == "__main__":
-    bot = NewsSummaryBot()
-    bot.run()  # Run once for testing
+    app.run(host='0.0.0.0', port=3000)

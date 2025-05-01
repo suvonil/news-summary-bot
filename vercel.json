@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "news_summary_bot.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "news_summary_bot.py",
+      "methods": ["GET", "POST"]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/api/run-bot"
+    }
+  ]
+}
