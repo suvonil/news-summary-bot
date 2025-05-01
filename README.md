@@ -29,6 +29,9 @@ python news_summary_bot.py
 - Sends summaries to a specified Slack channel
 - Runs daily at 9 AM
 
+## Note
+This is a small update to trigger a new build.
+
 ## Requirements
 
 - Python 3.8+
