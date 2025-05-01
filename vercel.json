@@ -10,7 +10,12 @@
     {
       "src": "/api/run-bot",
       "dest": "news_summary_bot.py",
-      "methods": ["GET", "POST"]
+      "methods": ["GET", "POST"],
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET,POST",
+        "Access-Control-Allow-Headers": "Content-Type"
+      }
     }
   ]
 }
